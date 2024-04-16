@@ -1,0 +1,142 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    // "width": 1900,
+    // "margin": "5, 0, 2, 0",
+    "reload_style_on_change": true,
+
+    "modules-left": [ "hyprland/workspaces", "cpu", "memory", "disk", "network", "bluetooth"],
+    "modules-right": ["tray", "idle_inhibitor", "pulseaudio", "battery", "clock", "custom/powermenu"],
+
+    // MODULE CONFIG
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": ["  ", "  ", "   ", "   ", "   "]
+    },
+
+    "bluetooth": {
+        "format-disabled": "",
+        "format-off": "",
+        "format-on": "  ",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_alias}  {device_battery_percentage}%",
+        "on-click": "blueman-manager",
+        "tooltip": false
+    },
+
+    "clock": {
+        "tooltip": false,
+        "format": "{:%I:%M %p}"
+    },
+
+    "cpu": {
+        "interval": 30,
+        "format": " {usage}%",
+        "min-length": 7
+    },
+
+    "disk": {
+        "interval": 30,
+        "format": " {percentage_used}%",
+        "path": "/"
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "  ",
+            "deactivated": ""
+        }
+    },
+
+    "keyboard-state": {
+        //"numlock": true,
+        "capslock": true,
+        "format": "{name} {icon} ",
+        "format-icons": {
+            "locked": " ",
+            "unlocked": ""
+        },
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": " {}%",
+        "min-length": 7
+    },
+
+    "network": {
+        "tooltip": true,
+        "interval": 30,
+	"format": "   disconnected",
+        "format-wifi": "  ",
+        "format-ethernet": "  ",
+        "format-disconnected": "  ",
+        "tooltip-format": "LINK: {ifname}\nIP: {ipaddr}/{cidr}\nSPEED: {bandwidthTotalBytes}",
+        "on-click": ""
+    },
+    "network#vpn": {
+        "interface": "tun0",
+        "format": ""
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+        "headphone": "  ",
+        "hands-free": "  ",
+        "headset": "  ",
+        "phone": "  ",
+        "portable": "  ",
+        "car": "  ",
+        "default": ["  ", "  ",  "  "]
+        },
+        "on-click": "pavucontrol &"
+    },
+
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "default": "1"
+            //"urgent": "  ",
+            //"focused": "  ",
+            //"default": "  "
+        },
+        // show all workspaces
+        //"persistent-workspaces" : {
+        //   "*": [1, 2, 3, 4, 5, 6, 7, 8 ,9] 
+        //}
+    },
+
+    "temperature": {
+	"tooltip": false,
+	"interval": 30,
+	"critical-threshold": 70,
+	"format": "{icon} {temperatureC}",
+	"format-icons": ["", "", "", "", ""]
+    },
+}
