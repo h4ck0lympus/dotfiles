@@ -1,0 +1,100 @@
+* {
+    transition: none;
+    box-shadow: none;
+    font-family: JetBrains Mono;
+    font-size: 13px;
+    color: #f2f2f2;
+}
+
+#waybar {
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    background-color: #1e1e2e;
+    border-radius: 10px;
+    border: none;
+}
+
+
+#workspaces {
+    margin: 0 4px;
+}
+
+#workspaces button {
+    margin: 3px 3px;
+    padding: 0 3px;
+    background: #313244;  /* TODO */
+}
+
+#workspaces button.active {
+    background: #7f849c;
+    border-radius: 10px;
+    margin: 4.5px 4.5px;
+}
+
+#workspaces button.urgent * {
+    color: #ff0055;
+}
+
+
+#mode, #battery, #bluetooth, #cpu, #disk, #memory, #temperature, #network, #pulseaudio, #idle_inhibitor, #backlight, #mpd, #clock, #temperature {
+    margin: 4px 4px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    min-width: 8px;
+    background-color: #313244;
+}
+
+#clock {
+    margin: 4px 2px;
+    padding: 0 10px;
+  }
+
+#tray {
+    margin: 3px 2px;
+    border-radius: 12px;
+    background-color: #060608;
+}
+  
+#tray * {
+    padding: 0 6px;
+    border-left: 1px solid #060608;
+}
+  
+#tray *:first-child {
+    border-left: none;
+}
+
+#mpd * {
+    min-width: 10px;
+    font-size: 11px;
+    font-family: JetBrainsMono;
+}
+  
+#custom-powermenu {
+    margin: 4px 5px 4px 4px;
+    padding: 0 6px;
+    background-color: #722F37;
+    border-radius: 10px;
+    min-width: 15px;
+}
+  
+#custom-launcher {
+    margin: 4px 1px 4px 5px;
+    padding: 0 6px;
+    background-color: #ff0055;
+    border-radius: 10px;
+    min-width: 15px;
+}
+
+#battery.warning {
+    color: #e5c07a
+} 
+
+#battery.critical {
+    color: #ff0055
+}
+
+#temperature.critical {
+    color: #e06b74;
+}

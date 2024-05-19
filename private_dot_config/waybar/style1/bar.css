@@ -1,0 +1,11 @@
+@import "colors.css";
+
+#waybar {
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    background-color: @background;
+    border-radius: 10px;
+    border: none;
+}
+
